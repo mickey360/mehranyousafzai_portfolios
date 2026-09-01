@@ -26,7 +26,7 @@ export default function Home() {
             <Reveal delay={0.18}>
               <div className="portrait-card">
                 <div className="portrait-inner">
-                  <Image src="/mehran.jpg" alt="Mehran Yousafzai" fill priority sizes="(max-width: 850px) 100vw, 420px" />
+                  <Image src="/mehran.png" alt="Mehran Yousafzai" fill priority sizes="(max-width: 850px) 100vw, 420px" />
                   <div className="portrait-overlay"><small>Currently based in</small><strong>{site.location}</strong></div>
                 </div>
               </div>
