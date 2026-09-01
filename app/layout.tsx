@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: site.intro,
     images: ["/og-image.svg"],
   },
-  icons: { icon: "/icon.svg" },
+  icons: { icon: "/icon.jpg" },
   robots: { index: true, follow: true },
 };
 
