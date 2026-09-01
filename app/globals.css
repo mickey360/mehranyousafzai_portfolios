@@ -1308,61 +1308,70 @@ body::before {
 /* =========================================================
    FOOTER
 ========================================================= */
-
 .footer {
-  padding: 39px 0 70px;
-
+  width: 100%;
+  padding: 32px 0 38px;
   border-top: 1px solid var(--border);
+  background: rgba(5, 5, 6, 0.35);
 }
 
 .footer-inner {
+  min-height: 44px;
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
-  gap: 22px;
-
+  gap: 24px;
   color: #716b79;
-
   font-size: 11px;
 }
 
-.footer-inner > div:first-child {
+.footer-brand {
   display: flex;
-
   align-items: center;
-
   gap: 10px;
+  flex-shrink: 0;
 }
 
 .footer-mark {
-  width: 27px;
-  height: 27px;
-
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
   display: grid;
   place-items: center;
-
   border-radius: 9px;
-
   color: #fff;
-
   background: #15111c;
-
   border: 1px solid var(--border);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.footer-tagline {
+  text-align: center;
+  color: #716b79;
+  white-space: nowrap;
 }
 
 .footer-links {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 18px;
+  flex-shrink: 0;
+}
 
-  gap: 17px;
+.footer-links a {
+  color: #716b79;
+  transition:
+    color .25s ease,
+    transform .25s ease;
 }
 
 .footer-links a:hover {
   color: #ddd;
+  transform: translateY(-1px);
 }
-
 /* =========================================================
    SCROLL TOP
 ========================================================= */
