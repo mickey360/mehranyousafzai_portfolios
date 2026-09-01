@@ -11,5 +11,17 @@ const contacts = [
 ];
 
 export default function ContactPage() {
-  return <section className="contact-shell"><div className="container"><Reveal><div className="contact-card"><div className="kicker">Let's connect</div><h1 className="contact-title">Have an idea?<br /><span className="gradient-text">Let's build it.</span></h1><p className="page-intro">I'm available to hire for freelance and remote work. Tell me what you're building and let's see how I can help.</p><div className="contact-grid"><div className="contact-list">{contacts.map(([label,value,href])=><a className="contact-item" key={label} href={href} target={href.startsWith("mailto:") ? undefined : "_blank"} rel="noreferrer"><span className="contact-icon">{label.slice(0,1)}</span><span><small>{label}</small><strong>{value}</strong></span><span className="contact-arrow">↗</span></a>)}</div><div><div className="info-card"><div className="info-icon">⌖</div><span>Based in</span><p>{site.location}</p></div><div className="info-card availability"><span>Availability</span><p style={{ color: "#7cf5b1" }}>{site.availability}</p></div></div></div></div></Reveal></div></section>;
+  return <section className="contact-shell">
+    <div className="container"><Reveal>
+      <div className="contact-card">
+        <div className="kicker">Let's connect</div><h1 className="contact-title">Have an idea?<br /><span className="gradient-text">Let's build it.</span></h1><p className="page-intro">I'm available to hire for freelance and remote work. Tell me what you're building and let's see how I can help.</p><div className="contact-grid"><div className="contact-list">{contacts.map(([label,value,href])=><a className="contact-item" key={label} href={href} target={href.startsWith("mailto:") ? undefined : "_blank"} rel="noreferrer"><span className="contact-icon">{label.slice(0,1)}</span><span><small>{label}</small><strong>{value}</strong></span><span className="contact-arrow">↗</span></a>)}</div><div><div className="info-card">
+          <div className="info-icon">⌖</div><span>Based in</span><p>{site.location}</p></div>
+    <div className="info-card availability-card">
+  <div className="availability-glow" aria-hidden="true" />
+  <div className="availability-content">
+    <div className="availability-icon">●</div>
+    <span>Availability</span>
+    <p>{site.availability}</p>
+  </div>
+</div></div></div></div></Reveal></div></section>;
 }
