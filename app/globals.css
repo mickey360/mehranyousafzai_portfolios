@@ -22,3 +22,45 @@ body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:80;opa
 @media(max-width:850px){.container,.hero-inner{width:min(calc(100% - 28px),var(--max))}.nav{width:calc(100% - 18px)}.nav-links{display:none}.nav-links.mobile-open{position:absolute;top:58px;left:0;right:0;display:flex;flex-direction:column;padding:9px;border:1px solid var(--border);border-radius:23px;background:rgba(7,6,10,.94);backdrop-filter:blur(20px);box-shadow:0 25px 70px rgba(0,0,0,.4)}.nav-links.mobile-open .nav-link{text-align:center;padding:13px}.mobile-toggle{display:flex}.hero{min-height:auto;padding:145px 0 80px}.hero-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:42px}.portrait-card{margin:0 auto;max-width:520px}.section{padding:88px 0}.section-head{display:block}.section-lead{margin-top:18px}.work-grid{grid-template-columns:1fr}.contact-shell{padding:145px 0 80px}}
 @media(max-width:560px){.hero-title{font-size:clamp(47px,14.7vw,75px)}.portrait-card{aspect-ratio:1/1.16}.project-card{min-height:435px;padding:22px}.project-links{left:22px}.tags{left:22px}.info-grid{grid-template-columns:1fr}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{gap:14px}.page-intro{font-size:16px}.nav-cta{padding:10px 12px}.brand{width:37px;height:37px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal,.portrait-card,.marquee-track{animation:none;opacity:1;transform:none}.project-card{transition:none}}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  text-decoration: none;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.brand:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: rgba(168, 85, 247, 0.7);
+  box-shadow:
+    0 0 25px rgba(168, 85, 247, 0.25),
+    0 0 50px rgba(168, 85, 247, 0.08);
+}
+
+.brand-avatar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.brand-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
