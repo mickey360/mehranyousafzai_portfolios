@@ -1,4 +1,6 @@
 import type { projects } from "@/data/site";
+import Link from "next/link";
+import type { CSSProperties } from "react";
 
 type Project = (typeof projects)[number];
 
