@@ -1,0 +1,26 @@
+{
+  "name": "mehran-yousafzai-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Portfolio of Mehran Yousafzai — AI/ML Developer & Full-Stack Web Developer.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.9.0 <25"
+  },
+  "dependencies": {
+    "next": "16.3.3",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.15.0",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "typescript": "5.8.3"
+  }
+}
