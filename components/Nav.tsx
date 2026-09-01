@@ -13,6 +13,7 @@ export default function Nav() {
   return (
     <header className="nav-wrap">
       <nav className="nav" aria-label="Primary navigation">
+
         <Link
           className="brand"
           href="/"
@@ -30,14 +31,16 @@ export default function Nav() {
           </span>
         </Link>
 
-        <div className={`nav-links ${open ? "mobile-open" : ""}`}>
+        <div
+          className={`nav-links ${open ? "mobile-open" : ""}`}
+        >
           {navItems.map((item) => (
             <Link
               key={item.href}
+              href={item.href}
               className={`nav-link ${
                 pathname === item.href ? "active" : ""
               }`}
-              href={item.href}
               onClick={() => setOpen(false)}
             >
               {item.label}
@@ -45,8 +48,12 @@ export default function Nav() {
           ))}
         </div>
 
-        <a className="nav-cta" href={`mailto:${site.email}`}>
-          Hire me <span aria-hidden="true">↗</span>
+        <a
+          className="nav-cta"
+          href={`mailto:${site.email}`}
+        >
+          Hire me
+          <span aria-hidden="true">↗</span>
         </a>
 
         <button
@@ -54,12 +61,17 @@ export default function Nav() {
           type="button"
           onClick={() => setOpen((value) => !value)}
           aria-expanded={open}
-          aria-label="Toggle navigation"
+          aria-label={
+            open
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          }
         >
           <span />
           <span />
           <span />
         </button>
+
       </nav>
     </header>
   );
